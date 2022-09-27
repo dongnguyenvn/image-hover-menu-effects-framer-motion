@@ -1,0 +1,35 @@
+@import url('https://use.typekit.net/krh5ncx.css');
+@import './menu';
+
+@font-face {
+   font-family: 'Maghfirea';
+   src: url(../assets/font/Maghfirea.otf);
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+:root {
+   font-size: 13px;
+}
+
+body {
+   margin: 0;
+   --color-frame-bg: #201f1f;
+   --color-bg: #000;
+   --color-link: #969696;
+   --color-link-hover: #fff;
+   --color-menu: #fff;
+   --color-menu-hover: #18d1ea;
+   --color-menu-deco: #ffffff;
+   // background-color: var(--color-bg);
+   --cursor-stroke: none;
+   --cursor-fill: #ff0000;
+   --cursor-stroke-width: 1px;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}

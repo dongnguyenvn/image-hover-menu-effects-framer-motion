@@ -1,0 +1,113 @@
+.menu {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   position: fixed;
+   inset: 0;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   background-color: var(--color-bg);
+   counter-reset: menucounter;
+}
+
+.menu {
+   &__item {
+      position: relative;
+      padding: 0 15vw;
+
+      display: flex;
+      justify-content: center;
+
+      &--text {
+         position: relative;
+         display: block;
+         line-height: 1;
+         letter-spacing: 0.25rem;
+         font-size: clamp(2rem, 6vw, 6rem);
+
+         cursor: pointer;
+
+         &:before {
+            counter-increment: menucounter;
+            content: counters(menucounter, '.', decimal-leading-zero);
+
+            position: absolute;
+            top: 10px;
+            left: -26px;
+            transform: translateX(-1rem);
+
+            display: flex;
+            align-items: center;
+
+            font-size: 1rem;
+            color: var(--color-menu-deco);
+            font-weight: bold;
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+         }
+
+         &-inner {
+            font-family: Maghfirea, sans-serif;
+            display: block;
+
+            color: var(--color-menu);
+            text-transform: uppercase;
+            white-space: nowrap;
+         }
+      }
+   }
+}
+
+//menu__item hover event
+.menu {
+   .menu__item {
+      &:hover {
+         .menu__item--text:before {
+            color: var(--color-menu-deco);
+            opacity: 1;
+            transform: translateX(0);
+         }
+
+         .menu__item--text-inner {
+            color: var(--color-menu-hover);
+         }
+      }
+   }
+}
+
+.menu {
+   .menu__item {
+      .hover-reveal {
+         position: absolute;
+         inset: 0;
+         z-index: -1;
+
+         width: 200px;
+         height: 280px;
+         opacity: 0;
+
+         pointer-events: none;
+         will-change: transform, filter;
+
+         &__inner,
+         &__inner--img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+         }
+
+         &__inner {
+            overflow: hidden;
+
+            &--img {
+               object-fit: cover;
+               object-position: 50% 50%;
+            }
+         }
+      }
+   }
+}
