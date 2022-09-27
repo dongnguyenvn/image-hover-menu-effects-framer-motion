@@ -2,7 +2,7 @@
 
 A hover effect for a menu where images appear with an animation for each item.
 
-[Demo](http://tympanus.net/Tutorials/RapidImageHoverMenu/)
+[Demo](https://image-hover-menu-effects-framer-motion-212e.vercel.app/)
 
 
 ## Installation
